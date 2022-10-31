@@ -1,0 +1,135 @@
+.zero{
+    /* Rectangle 32 */
+
+position: absolute;
+width: 336px;
+height: 28px;
+left: 408px;
+top: 232px;
+
+background: #FFDC40;
+
+}
+.one{
+    /* To-do list */
+
+position: absolute;
+width: 198px;
+height: 34px;
+left: 477px;
+top: 273px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 26px;
+line-height: 30px;
+text-align: center;
+text-transform: capitalize;
+
+color: #000000;
+
+
+
+}
+
+.two{
+    /* Rectangle 31 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 286px;
+height: 40px;
+left: 436px;
+top: 349px;
+
+border: 1px solid #C4C4C4;
+border-radius: 10px;
+
+}
+.three{
+    /* Rectangle 28 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 20px;
+height: 20px;
+left: 672px;
+top: 359px;
+
+border: 1px solid #C4C4C4;
+border-radius: 71px;
+
+}
+.four{
+    /* Group 34 */
+
+position: absolute;
+width: 25px;
+height: 15px;
+left: 689px;
+top: 323px;
+}
+.five{
+    /* Group 52 */
+
+position: absolute;
+width: 8px;
+height: 8px;
+left: 678px;
+top: 365px;
+
+
+
+
+
+}
+.six{
+    /* Rectangle 31 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 336px;
+height: 236px;
+left: 408px;
+top: 232px;
+
+border: 1px solid #C4C4C4;
+border-radius: 10px;
+
+}
+
+.seven{
+    /* Group 41 */
+
+position: absolute;
+width: 150px;
+height: 42px;
+left: 500px;
+top: 407px;
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
