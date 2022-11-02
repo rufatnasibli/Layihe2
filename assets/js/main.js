@@ -1,42 +1,42 @@
-const textInputField = document.querySelector('.input-text');
-const addButton = document.querySelector('.addbtn');
-const todosContainer = document.querySelector('.todos');
+const addButton = document.querySelector('.addButton');
+var input = document.querySelector('.input');
+const container = document.querySelector('.container');
 
 
-addButton.addEventListener('click', ()=>{
-    if(textInputField.value.trim().length=='')
-    return;
-    
-    const todoItemContainer = document.createElement('div');
-    todoItemContainer.classList.add('todo-item-container');
-
-    todosContainer.appendChild(todoItemContainer)
-
-    const todoText = document.createElement('p')
-    todoText.id = 'todo-text';
-    todoText.innerText = textInputField.value
-    todoItemContainer.appendChild(todoText)
-
-
-    const editButton = document.createElement('button')
-    editButton.id = 'edit';
-    editButton.innerHTML= 'Edit'
-    todoItemContainer.appendChild(editButton)
-    editButton.addEventListener('click', ()=>{
-        textInputField.value = todoText.innerText;
-        const parent = editButton.parentElement
-        parent.parentElement.removeChild(parent);
-    })
-
-    const deleteButton = document.createElement('button')
-    deleteButton.id = 'delete'
-    deleteButton.innerHTML= 'Delete'
-    todoItemContainer.appendChild(deleteButton)
-    deleteButton.addEventListener('click', ()=>{
-        const parent = deleteButton.parentElement;
-        parent.parentElement.removeChild(parent)
-    })
-
-    textInputField.value='';
-
+class item {
+    constructor(itemName) {
+        //Create item div
+        this.createDiv(itemName);
+    }
+    createDiv(itemName) {
+        let input = document.createElement('input');
+        input.value = itemName;
+        input.disabled = true;
+        input.classList.add('item_input')
+        input.type = "text";
+        let itemBox = document.createElement('div');
+        itemBox.classList.add('item')
+        let removeButton = document.createElement('button');
+        removeButton.innerHTML = "X";
+        removeButton.classList.add('removeButton');
+        container.appendChild(itemBox);
+        itemBox.appendChild(input);
+        itemBox.appendChild(removeButton);
+        removeButton.addEventListener('click', () => this.remove(itemBox));
+    }
+    remove(item) {
+        container.removeChild(item);
+    }
+}
+function check() {
+    if (input.value != "") {
+        new item(input.value);
+        input.value = "";
+    }
+}
+addButton.addEventListener('click', check);
+window.addEventListener('keydown', (e) => {
+    if (e.which == 13) {
+        check();
+    }
 })
